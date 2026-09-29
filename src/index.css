@@ -1,0 +1,20 @@
+:root {
+  --ink: #241532;
+  --muted: #6d6177;
+  --paper: #f5f1f8;
+  --line: #d9d0e2;
+  --accent: #4c216b;
+  --success: #3d976d;
+  --shadow: 0 22px 60px rgba(57, 29, 77, 0.14);
+  --sans: Arial, sans-serif;
+  --heading: Arial, sans-serif;
+  font: 16px/1.45 var(--sans);
+  color: var(--muted);
+  background: var(--paper);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body { margin: 0; min-width: 320px; background: linear-gradient(135deg, rgba(76,33,107,.08), transparent 35%), var(--paper); }
+#root { min-height: 100svh; }

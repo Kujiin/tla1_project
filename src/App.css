@@ -1,0 +1,46 @@
+.auth-layout, .ledger-layout { min-height: 100svh; }
+.auth-layout { display: grid; place-items: center; padding: 32px 20px; }
+.auth-panel { width: min(100%, 430px); padding: 48px; background: rgba(255,255,255,.9); border: 1px solid var(--line); box-shadow: var(--shadow); }
+.eyebrow, .section-kicker { color: var(--accent); font-size: 11px; font-weight: 800; letter-spacing: 1.8px; text-transform: uppercase; }
+h1, h2, p { margin: 0; }
+h1 { max-width: 600px; color: var(--ink); font-family: var(--heading); font-size: clamp(2.4rem, 5vw, 4.8rem); line-height: .98; letter-spacing: -2px; }
+.auth-panel h1 { margin: 14px 0 18px; font-size: clamp(2.3rem, 7vw, 3.5rem); }
+h2 { color: var(--ink); font-family: var(--heading); font-size: 1.65rem; line-height: 1.1; }
+.intro, .section-copy { color: var(--muted); line-height: 1.6; }
+.intro { margin-bottom: 32px; }
+form { display: grid; gap: 10px; }
+label { color: var(--ink); font-size: 13px; font-weight: 700; }
+input { width: 100%; box-sizing: border-box; padding: 13px 14px; border: 1px solid var(--line); border-radius: 3px; color: var(--ink); background: #fff; font: inherit; font-size: 14px; outline: none; transition: border-color 160ms ease, box-shadow 160ms ease; }
+input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(76,33,107,.14); }
+form label:not(:first-child) { margin-top: 10px; }
+.primary-button, .sign-out { border: 0; border-radius: 3px; cursor: pointer; font: inherit; font-size: 13px; font-weight: 800; transition: transform 160ms ease, background 160ms ease; }
+.primary-button { display: flex; align-items: center; justify-content: space-between; margin-top: 18px; padding: 14px 16px; color: #fff; background: var(--accent); }
+.primary-button:hover { background: #35154c; transform: translateY(-1px); }
+.feedback { margin-bottom: 18px; padding: 12px 14px; border-left: 3px solid; font-size: 13px; }
+.feedback-success { border-color: var(--success); color: #286246; background: #eaf6ef; }
+.feedback-error { border-color: #b43b35; color: #8c2925; background: #fcebea; }
+.credential-hint { margin-top: 24px; color: var(--muted); font-size: 12px; }
+.ledger-layout { width: min(1120px, 100%); margin: 0 auto; }
+.app-header { display: flex; align-items: end; justify-content: space-between; padding: 56px clamp(20px, 5vw, 72px) 40px; border-bottom: 1px solid var(--line); }
+.app-header h1 { margin-top: 12px; font-size: clamp(2.7rem, 6vw, 5rem); }
+.sign-out { padding: 10px 14px; color: var(--ink); background: transparent; border: 1px solid var(--line); }
+.sign-out:hover { border-color: var(--accent); color: var(--accent); }
+.ledger-content { display: grid; gap: 24px; padding: 32px clamp(20px, 5vw, 72px) 72px; }
+.form-panel, .table-panel { padding: 28px; border: 1px solid var(--line); background: rgba(255,255,255,.82); }
+.form-panel h2, .table-panel h2 { margin: 8px 0; }
+.section-copy { margin-bottom: 24px; font-size: 14px; }
+.field-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 16px; }
+.field-group { display: grid; gap: 8px; }
+.table-heading { display: flex; align-items: start; justify-content: space-between; gap: 20px; margin-bottom: 22px; }
+.category-count { padding: 7px 10px; color: var(--accent); background: #eee4f5; font-size: 12px; font-weight: 800; white-space: nowrap; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; text-align: left; }
+th { padding: 12px 10px; color: var(--muted); border-bottom: 1px solid var(--line); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; }
+td { padding: 17px 10px; color: var(--muted); border-bottom: 1px solid var(--line); font-size: 14px; }
+th:first-child, td:first-child { width: 35%; }
+.category-name { color: var(--ink); font-weight: 800; }
+.action-heading, .action-cell { text-align: right; }
+.remove-button { padding: 7px 10px; border: 1px solid #c6afd4; border-radius: 3px; color: #653681; background: transparent; cursor: pointer; font: inherit; font-size: 12px; font-weight: 800; }
+.remove-button:hover { border-color: #653681; color: #fff; background: #653681; }
+.empty-row td { padding: 28px 10px; color: var(--muted); text-align: center; }
+@media (max-width: 680px) { .auth-panel { padding: 32px 24px; } .app-header { align-items: start; gap: 24px; padding-top: 36px; flex-direction: column; } .field-grid { grid-template-columns: 1fr; } .form-panel, .table-panel { padding: 22px 18px; } }
