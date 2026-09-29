@@ -7,6 +7,10 @@ function shortenText(value, maxLength = 25) {
   return value.length >= maxLength ? `${value.slice(0, maxLength)}...` : value
 }
 
+function Footer() {
+  return <footer className="app-footer">Made by: Cyrus Macrohon | Kujin</footer>
+}
+
 function LoginPanel({ onAuthenticate }) {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
@@ -41,6 +45,7 @@ function LoginPanel({ onAuthenticate }) {
         </form>
         <p className="credential-hint">Demo credentials: admin / secret123</p>
       </section>
+      <Footer />
     </main>
   )
 }
@@ -121,6 +126,7 @@ function Ledger({ onSignOut }) {
         <button className="sign-out" type="button" onClick={onSignOut}>Sign out</button>
       </header>
       <div className="ledger-content"><CategoryForm onAddCategory={addCategory} /><CategoryTable categories={categories} onRemoveCategory={removeCategory} /></div>
+      <Footer />
     </main>
   )
 }
